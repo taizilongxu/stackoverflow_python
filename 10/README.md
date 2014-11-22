@@ -1,0 +1,25 @@
+| rank | ▲ | ✰ | vote | url |
+|:-:|:-:|:-:|:-:|:-:|
+|   10  |  903 | 326 | 325 | [url](http://stackoverflow.com/questions/101754/is-there-a-way-to-run-python-on-android) |
+
+***
+
+## 有方法让Python运行在Android上吗?
+
+我喜欢Android平台.试试上我和几个朋友在Spoxt项目里在用ADC(数模转换器?)
+
+但是我一点也不喜欢Java.我们工作在S60版本而且一个不错的Python的API.我知道Android上没有官方的Python版本,但是既然有Jython,有没有什么方法让它们能在Android上工作?
+
+***
+
+有一种方法,使用[Kivy](http://kivy.org/):
+
+```
+交互界面快速开发应用的Python开源库,像多点触控app.
+```
+
+```
+Kivy运行在 Linux, Windows, OS X, Android and iOS.你也可以在所有的平台上运行Python代码
+```
+
+[Kivy的应用](https://play.google.com/store/apps/details?id=org.kivy.showcase)

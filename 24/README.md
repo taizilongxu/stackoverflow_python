@@ -1,0 +1,30 @@
+| rank | ▲ | ✰ | vote | url |
+|:-:|:-:|:-:|:-:|:-:|
+|  24  |  644 | 117 | 879 | [url](http://stackoverflow.com/questions/3437059/does-python-have-a-string-contains-method) |
+
+***
+
+## Python中有检查字符串包含的方法吗?
+
+我正在找`string.contains`或者`string.indexof`方法.
+
+我希望:
+
+```python
+if not somestring.contains("blah"):
+   continue
+```
+
+***
+
+你可以用`in`啊:
+
+```python
+if not "blah" in somestring: continue
+```
+
+或者:
+
+```python
+if "blah" not in somestring: continue
+```

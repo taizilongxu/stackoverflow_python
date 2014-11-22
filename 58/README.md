@@ -1,0 +1,22 @@
+| rank | ▲ | ✰ | vote | url |
+|:-:|:-:|:-:|:-:|:-:|
+|  58 | 383 | 111 | 805 | [url](http://stackoverflow.com/questions/931092/reverse-a-string-in-python) |
+
+***
+
+## 反转字符串
+
+在Python里`str`没有内建的`reverse`函数.实现字符串反转最好的方法是什么?
+
+如果答案很简单的话,那么最有效的是什么.是不是`str`要转换成一个不同的对象.
+
+***
+
+这个怎么样:
+
+```python
+>>> 'hello world'[::-1]
+'dlrow olleh'
+```
+
+这是拓展的[切片](http://docs.python.org/2/whatsnew/2.3.html#extended-slices)语法.用`[begin:end:step]`实现-从begin开始到end结束步长是-1的话就可以反转一个字符串.

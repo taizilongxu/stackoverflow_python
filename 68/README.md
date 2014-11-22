@@ -1,0 +1,72 @@
+| rank | ▲ | ✰ | vote | url |
+|:-:|:-:|:-:|:-:|:-:|
+|  68 | 354 | 80 | 465 | [url](http://stackoverflow.com/questions/2225038/python-determine-the-type-of-an-object) |
+
+***
+
+## 查看一个对象的类型
+
+有什么方便的方法查看一个对象的类型?
+
+***
+
+为了获得对象的类型,可以用内建函数`type()`.把对象作为唯一的参数传递将会返回这个对象的类型:
+
+```python
+>>> type([]) is list
+True
+>>> type({}) is dict
+True
+>>> type('') is str
+True
+>>> type(0) is int
+True
+```
+
+当然也对自定义类型也有用:
+
+```python
+>>> class Test1 (object):
+        pass
+>>> class Test2 (Test1):
+        pass
+>>> a = Test1()
+>>> b = Test2()
+>>> type(a) is Test1
+True
+>>> type(b) is Test2
+True
+```
+
+注意`type()`只会返回对象的直接类型,不会告诉你继承类型.
+
+```python
+>>> type(b) is Test1
+False
+```
+
+可以用`isinstance`函数.也对内建函数管用:
+
+```python
+>>> isinstance(b, Test1)
+True
+>>> isinstance(b, Test2)
+True
+>>> isinstance(a, Test1)
+True
+>>> isinstance(a, Test2)
+False
+>>> isinstance([], list)
+True
+>>> isinstance({}, dict)
+True
+```
+
+`isinstance()`通常是确定一个对象类型更好的方法,因为它接受派生类型.所以除非你确实需要知道对象的类型(一些其他原因),用`isinstance()`比`type()`更好.
+
+`isinstance()`的第二个参数也接受类型的元组,所以也可以一次检查多种类型.如果是这些类型里的`isinstance()`将会返回true:
+
+```python
+>>> isinstance([], (tuple, list, set))
+True
+```

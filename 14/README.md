@@ -1,0 +1,85 @@
+| rank | ▲ | ✰ | vote | url |
+|:-:|:-:|:-:|:-:|:-:|
+|  14  |  805 | 326 | 554 | [url](http://stackoverflow.com/questions/136097/what-is-the-difference-between-staticmethod-and-classmethod-in-python) |
+
+***
+
+## 装饰器@staticmethod和@classmethod有什么区别?
+
+***
+
+也许一些例子会有帮助:注意`foo`, `class_foo` 和`static_foo`参数的区别:
+
+```python
+class A(object):
+    def foo(self,x):
+        print "executing foo(%s,%s)"%(self,x)
+
+    @classmethod
+    def class_foo(cls,x):
+        print "executing class_foo(%s,%s)"%(cls,x)
+
+    @staticmethod
+    def static_foo(x):
+        print "executing static_foo(%s)"%x
+
+a=A()
+```
+
+下面是一个对象实体调用方法的常用方式.对象实体`a`被隐藏的传递给了第一个参数.
+
+```python
+a.foo(1)
+# executing foo(<__main__.A object at 0xb7dbef0c>,1)
+```
+
+用**classmethods**装饰,隐藏的传递给第一个参数的是对象实体的类(`class A`)而不是`self`.
+
+```python
+a.class_foo(1)
+# executing class_foo(<class '__main__.A'>,1)
+```
+
+你也可以用类调用`class_foo`.实际上,如果你把一些方法定义成`classmethod`,那么实际上你是希望用类来调用这个方法,而不是用这个类的实例来调用这个方法.`A.foo(1)`将会返回一个`TypeError`错误,` A.class_foo(1)`将会正常运行:
+
+```python
+A.class_foo(1)
+# executing class_foo(<class '__main__.A'>,1)
+```
+
+One use people have found for class methods is to create inheritable alternative constructors.
+
+用**staticmethods**来装饰,不管传递给第一个参数的是`self`(对象实体)还是`cls`(类).它们的表现都一样:
+
+```python
+a.static_foo(1)
+# executing static_foo(1)
+
+A.static_foo('hi')
+# executing static_foo(hi)
+```
+
+静态方法被用来组织类之间有逻辑关系的函数.
+
+`foo`只是个函数,但是当你调用`a.foo`的时候你得到的不仅仅是一个函数,你得到的是一个第一个参数绑定到`a`的"加强版"函数.`foo`需要两个参数,而`a.foo`仅仅需要一个参数.
+
+`a`绑定了`foo`.下面可以知道什么叫"绑定"了:
+
+```python
+print(a.foo)
+# <bound method A.foo of <__main__.A object at 0xb7d52f0c>>
+```
+
+如果使用`a.class_foo`,是`A`绑定到了`class_foo`而不是`a`.
+
+```python
+print(a.class_foo)
+# <bound method type.class_foo of <class '__main__.A'>>
+```
+
+最后剩下静态方法,说到底它就是一个方法.`a.static_foo`只是返回一个不带参数绑定的方法.`static_foo`和`a.static_foo`只需要一个参数.
+
+```python
+print(a.static_foo)
+# <function static_foo at 0xb7d479cc>
+```

@@ -1,0 +1,28 @@
+| rank | ▲ | ✰ | vote | url |
+|:-:|:-:|:-:|:-:|:-:|
+|  21  |  688 | 153 | 1320 | [url](http://stackoverflow.com/questions/522563/accessing-the-index-in-python-for-loops) |
+
+***
+
+## 在循环中获取索引(数组下标)
+
+有人知道如何获取列表的索引值吗:
+
+```python
+ints = [8, 23, 45, 12, 78]
+```
+
+当我循环这个列表时如何获得它的索引下标?
+
+***
+
+如果像C或者PHP那样加入一个状态变量那就太不pythonic了.
+
+最好的选择就是用内建函数[enumerate](https://docs.python.org/2/library/functions.html#enumerate)
+
+```python
+for idx, val in enumerate(ints):
+    print idx, val
+```
+
+想了解更多可以查看[PEP279].在Python2.x和Python3.x都好使.

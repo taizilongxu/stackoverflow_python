@@ -1,0 +1,78 @@
+| rank | ▲ | ✰ | vote | url |
+|:-:|:-:|:-:|:-:|:-:|
+|  55 | 392 | 282 | 480 | [url](http://stackoverflow.com/questions/3394835/args-and-kwargs) |
+
+***
+
+## `*args`和 `**kwargs`
+
+我对`*args`和`**kwargs`的概念有点不理解.
+
+到目前位置我了解到:
+
+* `*args` = 参数列表-作为可选参数
+* `**kwargs` = 字典-参数的关键字作为键,它们的值作为字典的值.
+
+??
+
+说实话我不裂解这对编程来说有什么用?(我知道它,但是对他不了解.)
+
+或许:
+
+我想把字典或者列表当做参数的同时也把它们当成通配符,所以可以传递任何参数?
+
+有什么实际例子来解释怎么用`*args`和`**kwargs`?
+
+通过教程我只是用了"*"和一个变量名.
+
+还是`*args`和`**kwargs`只是一个占位符,你们在代码里用`*args`和`**kwargs`吗?
+
+***
+
+[`*`和`**`的语法](http://docs.python.org/tutorial/controlflow.html#arbitrary-argument-lists).用`*args`和`**kwargs`只是为了方便并没有强制使用它们.
+
+当你不确定你的函数里将要传递多少参数时你可以用`*args`.例如,它可以传递任意数量的参数:
+
+```python
+>>> def print_everything(*args):
+        for count, thing in enumerate(args):
+...         print '{0}. {1}'.format(count, thing)
+...
+>>> print_everything('apple', 'banana', 'cabbage')
+0. apple
+1. banana
+2. cabbage
+```
+
+相似的,`**kwargs`允许你使用没有事先定义的参数名:
+
+```python
+>>> def table_things(**kwargs):
+...     for name, value in kwargs.items():
+...         print '{0} = {1}'.format(name, value)
+...
+>>> table_things(apple = 'fruit', cabbage = 'vegetable')
+cabbage = vegetable
+apple = fruit
+```
+
+你也可以混着用.命名参数首先获得参数值然后所有的其他参数都传递给`*args`和`**kwargs`.命名参数在列表的最前端.例如:
+
+```python
+def table_things(titlestring, **kwargs)
+```
+
+`*args`和`**kwargs`可以同时在函数的定义中,但是`*args`必须在`**kwargs`前面.
+
+当调用函数时你也可以用`*`和`**`语法.例如:
+
+```python
+>>> def print_three_things(a, b, c):
+...     print 'a = {0}, b = {1}, c = {2}'.format(a,b,c)
+...
+>>> mylist = ['aardvark', 'baboon', 'cat']
+>>> print_three_things(*mylist)
+a = aardvark, b = baboon, c = cat
+```
+
+就像你看到的一样,它可以传递列表(或者元组)的每一项并把它们解包.注意必须与它们在函数里的参数相吻合.当然,你也可以在函数定义或者函数调用时用`*`.

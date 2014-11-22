@@ -1,0 +1,30 @@
+| rank | ▲ | ✰ | vote | url |
+|:-:|:-:|:-:|:-:|:-:|
+|  67 | 356 | 78 | 226 | [url](http://stackoverflow.com/questions/466345/converting-string-into-datetime) |
+
+***
+
+## 把字符串转化成时间
+
+短小精悍.我有一个特别大的列表存储了下面的字符串:
+
+```python
+Jun 1 2005  1:33PM
+Aug 28 1999 12:00AM
+```
+
+我想把它们转化成合适的时间格式存进数据库,所以我需要把它们变成真正的时间对象.
+
+非常感谢帮助.
+
+***
+
+检查[time](http://docs.python.org/2/library/time.html)模块的[strptime](http://docs.python.org/2/library/time.html#time.strptime)函数.它是[strftime](http://docs.python.org/2/library/time.html#time.strftime)的转换.
+
+***
+
+```python
+from datetime import datetime
+
+date_object = datetime.strptime('Jun 1 2005  1:33PM', '%b %d %Y %I:%M%p')
+```

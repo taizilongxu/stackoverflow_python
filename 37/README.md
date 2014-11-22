@@ -1,0 +1,36 @@
+| rank | ▲ | ✰ | vote | url |
+|:-:|:-:|:-:|:-:|:-:|
+|  37  |  511 | 93 | 416 | [url](http://stackoverflow.com/questions/493819/python-join-why-is-it-string-joinlist-instead-of-list-joinstring) |
+
+***
+
+## 为什么是string.join(list)而不是list.join(string)?
+
+我一直被这个问题困扰.如果这样写更好:
+
+```python
+my_list = ["Hello", "world"]
+print my_list.join("-")
+# Produce: "Hello-world"
+```
+
+而不是:
+
+```python
+my_list = ["Hello", "world"]
+print "-".join(my_list)
+# Produce: "Hello-world"
+```
+
+有什么特殊的原因让它不这样做吗?
+
+***
+
+是因为所有的可迭代对象都能被`join`,不仅仅是列表,但结果是我们一般要`join`的都是字符串.
+
+例如:
+
+```python
+import urllib2
+print '\n############\n'.join(urllib2.urlopen('http://data.stackexchange.com/users/7095'))
+```
