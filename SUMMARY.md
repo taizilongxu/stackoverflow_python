@@ -1,7 +1,10 @@
 # Summary
 
-## Part I
-* [Stackoverflow about Python](README.md)
+## 简介
+
+* [Introduction](README.md)
+
+## TOP 100
 * [Python中关键字yield有什么作用?](part1/1.md)
 * [Python中的元类(metaclass)是什么?](part1/2.md)
 * [Python中如何在一个函数中加入多个装饰器?](part1/3.md)
@@ -12,8 +15,8 @@
 * [怎么在windows下安装pip?](part1/8.md)
 * [如何在一个表达式里合并两个字典?](part1/9.md)
 * [有方法让Python运行在Android上吗?](part1/10.md)
-* [用字典的值对字典进行排序](part1/11.md)
-* [如何在一个函数里用全局变量?](part1/12.md)
+* [用字典的值(value)对字典进行排序](part1/11.md)
+* [如何在一个函数里使用全局变量?](part1/12.md)
 * [Python中的"小震撼":变化的默认参数](part1/13.md)
 * [装饰器@staticmethod和@classmethod有什么区别?](part1/14.md)
 * [检查列表是否为空的最好方法](part1/15.md)
@@ -73,7 +76,7 @@
 * [手动抛出异常](part1/69.md)
 * [字符串格式化:%和.format](part1/70.md)
 * [71](part1/71.md)
-* [怎么样去除空格(包括tab)?](part1/72,md)
+* [怎么样去除空格(包括tab)?](part1/72.md)
 * [把文件一行行读入数组](part1/73.md)
 * [74](part1/74.md)
 * [在Python中如何直达搜一个对象是可迭代的?](part1/75.md)
