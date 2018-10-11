@@ -11,7 +11,7 @@
 * [Python中的元类(metaclass)是什么?](part/2.md)
 * [在Python中有三元运算符吗?](part/3.md)
 * [用Python如何一个文件是否存在?](part/4.md)
-* [](part/5.md)
+* [`if __name__ == "__main__":`有什么作用?](part/5.md)
 * [在Python中调用外部命令?](part/6.md)
 * [如何在一个表达式里合并两个字典?](part/7.md)
 * [检查一个文件夹是否存在,如果不存在就创建它](part/8.md)
