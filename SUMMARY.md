@@ -41,7 +41,7 @@
 * [有方法让Python运行在Android上吗?](part/32.md)
 * [把字符串解析成浮点数或者整数](part/33.md)
 * [把文件一行行读入数组](part/34.md)
-* [](part/35.md)
+* [如何克隆或者 copy 一个 list ?](part/35.md)
 * [合并两个列表](part/36.md)
 * [](part/37.md)
 * [获得一个字符串的子串](part/38.md)
