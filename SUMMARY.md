@@ -31,7 +31,7 @@
 * [使用 for 来迭代字典的原理](part/22.md)
 * [在嵌套列表中获取 flat list](part/23.md)
 * [`__str__`和`repr__`的区别](part/24.md)
-* [](part/25.md)
+* [在 Python 里如何手工进行延迟?](part/25.md)
 * [Python中的"小震撼":变化的默认参数](part/26.md)
 * [怎么用引用来改变一个变量?](part/27.md)
 * [在Python里获取当前时间](part/28.md)
