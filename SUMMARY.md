@@ -28,7 +28,7 @@
 * [查找列表中某个元素的下标](part/19.md)
 * [检查一个键在字典中是否存在](part/20.md)
 * [怎么在windows下安装pip?](part/21.md)
-* [](part/22.md)
+* [使用 for 来迭代字典的原理](part/22.md)
 * [](part/23.md)
 * [`__str__`和`repr__`的区别](part/24.md)
 * [](part/25.md)
