@@ -43,7 +43,7 @@
 * [把文件一行行读入数组](part/34.md)
 * [如何克隆或者 copy 一个 list ?](part/35.md)
 * [合并两个列表](part/36.md)
-* [](part/37.md)
+* [在 macOS 上如何安装 pip](part/37.md)
 * [获得一个字符串的子串](part/38.md)
 * [在Python怎么样才能把列表分割成同样大小的块?](part/39.md)
 * [Python中`**`和`*`参数有什么用?](part/40.md)
