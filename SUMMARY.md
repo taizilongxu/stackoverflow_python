@@ -85,7 +85,7 @@
 * [](part/76.md)
 * [](part/77.md)
 * [在Python里如何用枚举类型?](part/78.md)
-* [](part/79.md)
+* [如何计算列表中元素出现的个数?](part/79.md)
 * [如何离开/退出/停用Python的virtualenv？](part/80.md)
 * [反转字符串](part/81.md)
 * [](part/82.md)
