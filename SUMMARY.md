@@ -80,7 +80,7 @@
 * [在 Python 里如何读取 stdin?](part/71.md)
 * [字符串格式化:%和.format](part/72.md)
 * [限制浮点型到小数点后两位](part/73.md)
-* [](part/74.md)
+* [在 Python 中如何得到对象的所有属性?](part/74.md)
 * [](part/75.md)
 * [](part/76.md)
 * [](part/77.md)
