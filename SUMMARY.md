@@ -71,7 +71,7 @@
 * [在列表中随机取一个元素](part/62.md)
 * [如何移除换行符?](part/63.md)
 * [ 在 Python 中如何获取环境变量](part/64.md)
-* [](part/65.md)
+* [bytes 换成 string](part/65.md)
 * [](part/66.md)
 * [检查一个字符串是否是一个数字](part/67.md)
 * [通过函数名的字符串来调用这个函数](part/68.md)
