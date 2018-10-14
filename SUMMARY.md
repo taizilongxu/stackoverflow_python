@@ -101,7 +101,7 @@
 * [输出到stderr](part/92.md)
 * [在实例名字前单下划线和双下划线的含义](part/93.md)
 * [如何测量脚本运行时间?](part/94.md)
-* [](part/95.md)
+* [UnicodeEncodeError: 'ascii' codec can't encode character u'\xa0' in position 20: ordinal not in range(128)](part/95.md)
 * [如何连接MySQL?](part/96.md)
 * [](part/97.md)
 * [](part/98.md)
