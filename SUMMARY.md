@@ -58,7 +58,7 @@
 * [Python中用什么代替switch语句?](part/49.md)
 * [删除文件或者文件夹](part/50.md)
 * [为什么在C++中读取stdin中的行会比Python慢呢?](part/51.md)
-* [](part/52.md)
+* [`__init__.py` 的作用](part/52.md)
 * [用pip升级所有包](part/53.md)
 * [获取列表最后一个元素](part/54.md)
 * [查看一个对象的类型](part/55.md)
