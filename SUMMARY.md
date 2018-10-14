@@ -53,7 +53,7 @@
 * [查找当前目录和文件目录](part/44.md)
 * [在 Python 中如何将字符串转回为小写](part/45.md)
 * [复制文件](part/46.md)
-* [](part/47.md)
+* [Python 中类的静态变量](part/47.md)
 * [把字符串转化成时间](part/48.md)
 * [Python中用什么代替switch语句?](part/49.md)
 * [](part/50.md)
