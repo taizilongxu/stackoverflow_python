@@ -90,7 +90,7 @@
 * [反转字符串](part/81.md)
 * [ 在 Python 中如何移除字典中的 key ?](part/82.md)
 * [ 如何查看 Python 变量的类型?](part/83.md)
-* [](part/84.md)
+* [如何删除 list 中指定 index 的元素?](part/84.md)
 * [](part/85.md)
 * [如何获取实例的类名](part/86.md)
 * [](part/87.md)
