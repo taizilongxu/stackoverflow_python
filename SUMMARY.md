@@ -88,7 +88,7 @@
 * [如何计算列表中元素出现的个数?](part/79.md)
 * [如何离开/退出/停用Python的virtualenv？](part/80.md)
 * [反转字符串](part/81.md)
-* [](part/82.md)
+* [ 在 Python 中如何移除字典中的 key ?](part/82.md)
 * [](part/83.md)
 * [](part/84.md)
 * [](part/85.md)
