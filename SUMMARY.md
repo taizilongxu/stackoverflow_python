@@ -62,7 +62,7 @@
 * [用pip升级所有包](part/53.md)
 * [获取列表最后一个元素](part/54.md)
 * [查看一个对象的类型](part/55.md)
-* [](part/56.md)
+* [为什么 "1000000000000000 in range(1000000000000001)" 在 Python3 里速度那么快?](part/56.md)
 * [](part/57.md)
 * [静态方法](part/58.md)
 * [为什么是string.join(list)而不是list.join(string)?](part/59.md)
