@@ -91,7 +91,7 @@
 * [ 在 Python 中如何移除字典中的 key ?](part/82.md)
 * [ 如何查看 Python 变量的类型?](part/83.md)
 * [如何删除 list 中指定 index 的元素?](part/84.md)
-* [](part/85.md)
+* [使用列表推导式的方式来创建字典](part/85.md)
 * [如何获取实例的类名](part/86.md)
 * [](part/87.md)
 * [给字符串填充0](part/88.md)
