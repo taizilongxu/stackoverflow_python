@@ -77,7 +77,7 @@
 * [通过函数名的字符串来调用这个函数](part/68.md)
 * [如何增加文件的内容?](part/69.md)
 * [`*args`和 `**kwargs`](part/70.md)
-* [](part/71.md)
+* [在 Python 里如何读取 stdin?](part/71.md)
 * [字符串格式化:%和.format](part/72.md)
 * [](part/73.md)
 * [](part/74.md)
