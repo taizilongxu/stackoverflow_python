@@ -81,7 +81,7 @@
 * [字符串格式化:%和.format](part/72.md)
 * [限制浮点型到小数点后两位](part/73.md)
 * [如何解析一个 JSON 文件?](part/74.md)
-* [](part/75.md)
+* [如何改变 matplotlib 图像大小](part/75.md)
 * [在 Python 中如何得到对象的所有属性?](part/76.md)
 * [](part/77.md)
 * [在Python里如何用枚举类型?](part/78.md)
