@@ -104,6 +104,6 @@
 * [UnicodeEncodeError: 'ascii' codec can't encode character u'\xa0' in position 20: ordinal not in range(128)](part/95.md)
 * [如何连接MySQL?](part/96.md)
 * [如何使用线程](part/97.md)
-* [](part/98.md)
-* [检查字符串为空的最优雅的方法](part/99.md)
+* [检查字符串为空的最优雅的方法](part/98.md)
+* [](part/99.md)
 * [如何在 .format 中使用大括号?](part/100.md)

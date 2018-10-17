@@ -6,6 +6,8 @@ import re
 
 from bs4 import BeautifulSoup
 from lxml import etree
+import datetime
+import time
 
 URL = "https://stackoverflow.com/questions/tagged/python?page={}&sort=votes&pagesize=15"
 PATH = "/Users/limbo/github/stackoverflow_python"
@@ -37,6 +39,8 @@ README_TEMPLETE = """
 翻译是根据 question id 写在 data 文件夹, 运行脚本 `get_so_100.py` 自动生成 `part` 部分文档
 
 ## 目录
+
+> 图表数据更新时间 {}
 
 | rank | vote | view | answer | url |中文|
 |:-:|:-:|:-:|:-:|:-:|:-|
@@ -111,12 +115,14 @@ def make_readme(data):
     lines = []
     for index, i in enumerate(data):
         content = get_content_by_pid(i['pid'])
+        file_name = '{}.md'.format(index + 1)
         cn_name = get_tran_title(content)
-        line = "|{}|{}|{}|{}|[url](http://stackoverflow.com{})|{}|".format(index+1, i['vote'], i['views'],
-                                        i['answers'], i['href'], cn_name)
+        line = "|{}|{}|{}|{}|[url](http://stackoverflow.com{})|[{}](part/{})|".format(index+1, i['vote'], i['views'],
+                                        i['answers'], i['href'], cn_name, file_name)
         lines.append(line)
 
-    return README_TEMPLETE.format('\n'.join(lines))
+    update_time = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
+    return README_TEMPLETE.format(update_time, '\n'.join(lines))
 
 def make_summary_file(content):
     with open('{}/SUMMARY.md'.format(PATH), 'w') as F:
