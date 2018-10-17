@@ -28,6 +28,21 @@ SUMMARY_TEMPLETE = """
 {}
 """
 
+README_TEMPLETE = """
+# Stackoverflow 上关于 Python 的问题
+[![](https://img.shields.io/github/stars/taizilongxu/stackoverflow_python.svg?style=for-the-badge&label=Stars)](https://github.com/taizilongxu/stackoverflow_python) 
+
+排名根据 vote 数量选取, 许多 SO 上的回答质量确实高, 有能力建议查看原文, 一般引用的文章也非常好,
+
+翻译是根据 question id 写在 data 文件夹, 运行脚本 `get_so_100.py` 自动生成 `part` 部分文档
+
+## 目录
+
+| rank | vote | view | answer | url |中文|
+|:-:|:-:|:-:|:-:|:-:|:-|
+{}
+"""
+
 
 def get_page(num):
     data = []
@@ -92,6 +107,16 @@ def make_summary(data):
 
     return SUMMARY_TEMPLETE.format('\n'.join(tocs))
 
+def make_readme(data):
+    lines = []
+    for index, i in enumerate(data):
+        content = get_content_by_pid(i['pid'])
+        cn_name = get_tran_title(content)
+        line = "|{}|{}|{}|{}|[url](http://stackoverflow.com{})|{}|".format(index+1, i['vote'], i['views'],
+                                        i['answers'], i['href'], cn_name)
+        lines.append(line)
+
+    return README_TEMPLETE.format('\n'.join(lines))
 
 def make_summary_file(content):
     with open('{}/SUMMARY.md'.format(PATH), 'w') as F:
@@ -112,10 +137,16 @@ def make_question_files(data):
 
         make_question_file(content, file_name)
 
-data = get_100()
+def make_readme_file(data):
+    with open('{}/README.md'.format(PATH), 'w') as F:
+        F.write(data)
 
+data = get_100()
 
 content = make_summary(data)
 make_summary_file(content)
+
+readme = make_readme(data)
+make_readme_file(readme)
 
 make_question_files(data)
